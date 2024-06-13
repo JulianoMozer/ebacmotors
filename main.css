@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e legível */
+}
+
+html {
+    overflow-x: hidden; /* Evita a rolagem horizontal indesejada */
+}
+
+.container {
+    max-width: 1024px; /* Define a largura máxima do contêiner */
+    width: 100%;
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+header {
+    background-color: #192a56; /* Cor de fundo do cabeçalho */
+    padding-top: 16px; /* Espaçamento superior no cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+}
+
+header > .container {
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Alinhamento dos itens ao centro */
+    padding-bottom: 16px; /* Espaçamento inferior no contêiner do cabeçalho */
+}
+
+nav {
+    background-color: #575fcf; /* Cor de fundo da navegação */
+    padding: 16px 0; /* Espaçamento na navegação */
+    display: none; /* Inicialmente escondido */
+}
+
+nav li {
+    list-style: none; /* Remove os marcadores das listas */
+    display: inline; /* Exibe os itens da lista em linha */
+    margin-right: 16px; /* Espaçamento à direita dos itens */
+    font-size: 18px; /* Tamanho da fonte dos itens */
+    font-weight: bold; /* Texto em negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+nav li a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remove a sublinha dos links */
+}
+
+.menu-hamburguer {
+    width: 32px; /* Largura do menu hambúrguer */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o menu */
+}
+
+.menu-hamburguer span {
+    height: 2px; /* Altura das linhas do menu hambúrguer */
+    width: 100%; /* Largura total do menu hambúrguer */
+    background-color: #fff; /* Cor das linhas do menu hambúrguer */
+    display: block;
+    margin-bottom: 4px; /* Espaçamento entre as linhas do menu */
+}
+
+.container-flex {
+    display: flex; /* Exibe os itens como flexbox */
+}
+
+#sobre-a-loja img {
+    max-width: 400px; /* Largura máxima das imagens */
+    margin-right: 24px; /* Espaçamento à direita das imagens */
+}
+
+section {
+    padding: 48px 0; /* Espaçamento nas seções */
+}
+
+section h2 {
+    margin-bottom: 16px; /* Espaçamento inferior nos títulos das seções */
+}
+
+.lista-veiculos {
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+}
+
+.lista-veiculos li {
+    margin-bottom: 24px; /* Espaçamento inferior dos itens da lista */
+    list-style: none; /* Remove os marcadores das listas */
+    max-width: 30%; /* Largura máxima dos itens da lista */
+}
+
+.lista-veiculos li img {
+    max-width: 100%; /* Largura máxima das imagens */
+}
+
+.lista-veiculos li h3 {
+    margin: 16px 0; /* Espaçamento nos títulos dos itens da lista */
+}
+
+.item-central {
+    margin: 0 5%; /* Margem à esquerda e direita do item central */
+}
+
+.lista-veiculos li button {
+    display: block; /* Exibe o botão como bloco */
+    width: 100%; /* Largura total do botão */
+    padding: 8px 0; /* Espaçamento interno do botão */
+    border: none; /* Remove bordas do botão */
+    background-color: #119759; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    font-size: 16PX; /* Tamanho da fonte do botão */
+    font-weight: bold; /* Texto em negrito no botão */
+    font-style: italic; /* Texto em itálico no botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    border-radius: 6px; /* Bordas arredondadas do botão */
+}
+
+.lista-veiculos li strong {
+    margin: 16px 0; /* Espaçamento nos textos em negrito */
+    display: block; /* Exibe o texto em bloco */
+}
