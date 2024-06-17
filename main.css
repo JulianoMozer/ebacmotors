@@ -10,7 +10,7 @@ html {
 }
 
 .container {
-    max-width: 1024px; /* Define a largura máxima do contêiner */
+    max-width: 1624px; /* Define a largura máxima do contêiner */
     width: 100%;
     margin: 0 auto; /* Centraliza o contêiner */
 }
@@ -22,9 +22,13 @@ header {
 }
 
 header > .container {
+    display: flex;
     justify-content: space-between; /* Espaçamento entre os itens */
     align-items: center; /* Alinhamento dos itens ao centro */
     padding-bottom: 16px; /* Espaçamento inferior no contêiner do cabeçalho */
+    max-width: 1624px; /* Define a largura máxima do contêiner */
+    width: 100%;
+    margin: 0 auto; /* Centraliza o contêiner */
 }
 
 nav {
@@ -60,13 +64,16 @@ nav li a {
     margin-bottom: 4px; /* Espaçamento entre as linhas do menu */
 }
 
-.container-flex {
-    display: flex; /* Exibe os itens como flexbox */
+#sobre-a-loja {
+    text-align: justify; /* Centraliza todo o conteúdo horizontalmente */
+    padding: 48px 400px; /* Espaçamento interno da seção */
 }
 
 #sobre-a-loja img {
-    max-width: 400px; /* Largura máxima das imagens */
+    max-width: 100%; /* Largura máxima das imagens */
+    height: auto; /* Altura automática para manter a proporção */
     margin-right: 24px; /* Espaçamento à direita das imagens */
+    display: inline-block; /* Garante que a imagem seja tratada como um bloco dentro do conteúdo centralizado */
 }
 
 section {
@@ -78,25 +85,48 @@ section h2 {
 }
 
 .lista-veiculos {
-    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
 }
 
 .lista-veiculos li {
-    margin-bottom: 24px; /* Espaçamento inferior dos itens da lista */
-    list-style: none; /* Remove os marcadores das listas */
-    max-width: 30%; /* Largura máxima dos itens da lista */
+    flex: 0 0 calc(25% - 10px); /* Distribui os itens em 4 colunas com margem menor */
+    margin-bottom: 24px;
+    list-style: none;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.lista-veiculos li img {
-    max-width: 100%; /* Largura máxima das imagens */
+.lista-veiculos li img[src$="carro-bmw.png"] {
+    width: 100%; /* Ajusta a largura da imagem para ocupar 100% do espaço disponível */
+    max-height: 250px; /* Define a altura máxima da imagem */
+    object-fit: cover; /* Garante que a imagem mantenha sua proporção */
+}
+
+@media (max-width: 1200px) {
+    .lista-veiculos li {
+        flex-basis: calc(33.33% - 10px); /* Distribui os itens em 3 colunas em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-veiculos li {
+        flex-basis: calc(50% - 10px); /* Distribui os itens em 2 colunas em telas ainda menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-veiculos li {
+        flex-basis: 100%; /* Distribui os itens em 1 coluna em telas pequenas */
+    }
 }
 
 .lista-veiculos li h3 {
     margin: 16px 0; /* Espaçamento nos títulos dos itens da lista */
-}
-
-.item-central {
-    margin: 0 5%; /* Margem à esquerda e direita do item central */
 }
 
 .lista-veiculos li button {
@@ -106,7 +136,7 @@ section h2 {
     border: none; /* Remove bordas do botão */
     background-color: #119759; /* Cor de fundo do botão */
     color: #fff; /* Cor do texto do botão */
-    font-size: 16PX; /* Tamanho da fonte do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
     font-weight: bold; /* Texto em negrito no botão */
     font-style: italic; /* Texto em itálico no botão */
     cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
@@ -116,4 +146,12 @@ section h2 {
 .lista-veiculos li strong {
     margin: 16px 0; /* Espaçamento nos textos em negrito */
     display: block; /* Exibe o texto em bloco */
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center;
+    max-width: 1624px; /* Define a largura máxima do contêiner */
+    width: 100%;
+    margin: 0 auto; /* Centraliza o contêiner */
 }
